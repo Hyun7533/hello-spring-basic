@@ -1,11 +1,12 @@
 package com.hello.core.member;
 
+import com.hello.core.discount.FixDiscountPolicy;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
 
-    MemberService memberService = new MemberServiceImpl();
+    MemberService memberService = new MemberServiceImpl(new MemoryMemberRepository());
 
     @Test
     void join() {
